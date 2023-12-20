@@ -1,4 +1,4 @@
-function queryParams(): Record<string, string> {
+function getQueryParams(): Record<string, string> {
   const queryParams = new URLSearchParams(window.location.search);
   let params: Record<string, string> = {};
   queryParams.forEach((value, key: string) => {
@@ -6,4 +6,6 @@ function queryParams(): Record<string, string> {
   });
   return params;
 }
-module.exports = queryParams;
+
+export  {getQueryParams}
+// module.exports = getQueryParams;

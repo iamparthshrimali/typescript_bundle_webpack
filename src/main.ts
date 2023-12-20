@@ -1,8 +1,9 @@
 const fetchUser = require("./services/fetchUser.ts");
-const queryParameters = require("./services/queryParams");
+// const {getQueryParams} = require("./services/queryParams");
+import {getQueryParams } from './services/queryParams'
 
 // import { type User } from "./types";
-function getUser(): Promise<any> {
+export default function getUser(): Promise<any> {
   return fetchUser().then((res: any) => res.json());
 }
 
@@ -17,5 +18,5 @@ const extendedWindow = window as ExtendedWindow;
 // console.log(getUser())
 
 extendedWindow.getUser = getUser;
-extendedWindow.queryParams = queryParameters;
+extendedWindow.queryParams = getQueryParams;
 // Window.getUser = getUser;

@@ -1,6 +1,6 @@
-const fetchUser = require("./services/fetchUser.ts");
+const fetchUser = require("./utils/fetchUser.ts");
 // const {getQueryParams} = require("./services/queryParams");
-import {getQueryParams } from './services/queryParams'
+import {getQueryParams } from './utils/queryParams'
 
 // import { type User } from "./types";
 export default function getUser(): Promise<any> {
